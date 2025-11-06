@@ -14,7 +14,7 @@ export default function PainPoints({ content, language }) {
       padding: '120px 0 96px',
       direction: isRTL ? 'rtl' : 'ltr'
     }}>
-      <div className="container">
+      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         <h2 style={{
           fontSize: 'clamp(32px, 4vw, 48px)',
           fontWeight: '800',
@@ -35,108 +35,99 @@ export default function PainPoints({ content, language }) {
           {content.description}
         </p>
 
-        {/* Hero-style layout with background container */}
-        {points.map((point, index) => (
-          <div key={index} className="painpoint-item" style={{
-            marginBottom: index < points.length - 1 ? '120px' : '0',
-            position: 'relative',
-            minHeight: '400px'
-          }}>
-            <div className="painpoint-content" style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: isRTL ? 'flex-start' : 'flex-end',
+        {/* Centered cards layout */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '32px' }}>
+          {points.map((point, index) => (
+            <div key={index} className="painpoint-item" style={{
               position: 'relative',
-              flexDirection: isRTL ? 'row-reverse' : 'row',
-              gap: '60px'
+              width: '80%',
+              maxWidth: '800px',
+              minHeight: '280px'
             }}>
-              {/* Background container with rounded corners */}
-              <div className="painpoint-background" style={{
-                background: 'var(--primary-blue)',
+              <div className="painpoint-card" style={{
+                background: '#00B5FF',
                 borderRadius: '40px',
-                padding: isRTL ? '80px 120px 80px 60px' : '80px 60px 80px 120px',
-                maxWidth: '600px',
+                padding: '60px 80px',
                 width: '100%',
-                flex: '1',
-                boxShadow: '0 20px 40px rgba(38, 183, 255, 0.15)',
+                boxShadow: '0 20px 40px rgba(0, 181, 255, 0.2)',
                 position: 'relative',
-                overflow: 'visible'
+                overflow: 'visible',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '40px'
               }}>
+                {/* Text content */}
                 <div style={{
+                  flex: '1',
                   color: 'white',
-                  textAlign: isRTL ? 'right' : 'left'
+                  textAlign: isRTL ? 'right' : 'left',
+                  paddingRight: isRTL ? '0' : '100px',
+                  paddingLeft: isRTL ? '100px' : '0'
                 }}>
                   <h3 style={{
-                    fontSize: 'clamp(40px, 5vw, 48px)',
+                    fontSize: 'clamp(32px, 4vw, 40px)',
                     fontWeight: '800',
                     marginBottom: '16px',
-                    lineHeight: 1.2,
-                    margin: isRTL ? '0 0 16px 0' : '0 0 16px 0'
+                    lineHeight: 1.2
                   }}>
-                    {index === 0 && '语言学习挑战'}
-                    {index === 1 && '沟通障碍困扰'}
-                    {index === 2 && '学习时间紧张'}
+                    {index === 0 && (language === 'zh' ? '语言学习挑战' : language === 'ar' ? 'تحديات تعلم اللغة' : 'Language Learning Challenges')}
+                    {index === 1 && (language === 'zh' ? '沟通障碍困扰' : language === 'ar' ? 'مشاكل التواصل' : 'Communication Barriers')}
+                    {index === 2 && (language === 'zh' ? '学习时间紧张' : language === 'ar' ? 'وقت التعلم المحدود' : 'Limited Study Time')}
                   </h3>
                   <p style={{
-                    fontSize: 'clamp(22px, 3vw, 26px)',
+                    fontSize: 'clamp(18px, 2.5vw, 22px)',
                     fontWeight: '400',
                     lineHeight: 1.6,
                     opacity: 0.95,
                     marginBottom: '0'
                   }}>
-                    {index === 0 && '缺乏母语环境，难以提升口语表达能力'}
-                    {index === 1 && '缺乏练习机会，不敢开口说英语'}
-                    {index === 2 && '工作繁忙，无法安排固定的学习时间'}
+                    {index === 0 && (language === 'zh' ? '缺乏母语环境，难以提升口语表达能力' : language === 'ar' ? 'نقص البيئة اللغوية الأم، صعوبة في تحسين مهارات التحدث' : 'Lack of native environment, difficult to improve speaking skills')}
+                    {index === 1 && (language === 'zh' ? '缺乏练习机会，不敢开口说英语' : language === 'ar' ? 'نقص فرص الممارسة، الخوف من التحدث باللغة الإنجليزية' : 'Lack of practice opportunities, afraid to speak English')}
+                    {index === 2 && (language === 'zh' ? '工作繁忙，无法安排固定的学习时间' : language === 'ar' ? 'العمل المزدحم، عدم القدرة على تحديد وقت ثابت للتعلم' : 'Busy work schedule, unable to set fixed study time')}
                   </p>
                 </div>
-              </div>
 
-              {/* Character image with overflow effect */}
-              <div className="painpoint-character" style={{
-                position: 'absolute',
-                [isRTL ? 'left' : 'right']: isRTL ? '-40px' : '-40px',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                zIndex: '10',
-                filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2))'
-              }}>
-                <div style={{
-                  fontSize: '180px',
-                  width: '180px',
-                  height: '180px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  borderRadius: '50%',
-                  backdropFilter: 'blur(10px)'
+                {/* Character image with overflow effect */}
+                <div className="painpoint-character" style={{
+                  position: 'absolute',
+                  [isRTL ? 'left' : 'right']: '-60px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  zIndex: '10',
+                  filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))'
                 }}>
-                  {index === 0 ? '😟' : index === 1 ? '🗣️' : '👨‍👩‍👧‍👦'}
+                  <img
+                    src="/images/headache.png"
+                    alt="Pain point expression"
+                    style={{
+                      width: '200px',
+                      height: '200px',
+                      objectFit: 'contain',
+                      borderRadius: '20px',
+                      background: 'rgba(0, 0, 0, 0.8)',
+                      padding: '10px'
+                    }}
+                  />
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       <style jsx>{`
         @media (max-width: 768px) {
           .painpoint-item {
-            min-height: auto !important;
-            margin-bottom: 80px !important;
+            width: 95% !important;
+            minHeight: 'auto' !important;
           }
 
-          .painpoint-content {
+          .painpoint-card {
+            padding: 40px 30px !important;
             flex-direction: column !important;
-            gap: 40px !important;
-            align-items: center !important;
-            justify-content: center !important;
             text-align: center !important;
-          }
-
-          .painpoint-background {
-            padding: 60px 40px !important;
-            text-align: center !important;
+            gap: 20px !important;
           }
 
           .painpoint-character {
@@ -144,21 +135,37 @@ export default function PainPoints({ content, language }) {
             ${isRTL ? 'left' : 'right'}: auto !important;
             top: auto !important;
             transform: none !important;
-            margin-bottom: '-60px';
+            margin: '20px 0' !important;
           }
 
-          .painpoint-character > div {
-            font-size: 120px !important;
+          .painpoint-character img {
             width: 120px !important;
             height: 120px !important;
           }
 
-          .painpoint-background h3 {
-            font-size: clamp(32px, 6vw, 36px) !important;
+          .painpoint-card > div:first-child {
+            padding: 0 !important;
+            text-align: center !important;
           }
 
-          .painpoint-background p {
-            font-size: clamp(18px, 4vw, 22px) !important;
+          .painpoint-card h3 {
+            font-size: clamp(24px, 6vw, 32px) !important;
+            margin-bottom: 12px !important;
+          }
+
+          .painpoint-card p {
+            font-size: clamp(16px, 4vw, 18px) !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .painpoint-card {
+            padding: 30px 20px !important;
+          }
+
+          .painpoint-character img {
+            width: 100px !important;
+            height: 100px !important;
           }
         }
       `}</style>
