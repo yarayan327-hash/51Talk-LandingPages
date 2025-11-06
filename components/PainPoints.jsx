@@ -105,8 +105,9 @@ export default function PainPoints({ content, language }) {
                       height: '200px',
                       objectFit: 'contain',
                       borderRadius: '20px',
-                      background: 'rgba(0, 0, 0, 0.8)',
-                      padding: '10px'
+                      background: 'rgba(253, 231, 0, 0.3)',
+                      padding: '10px',
+                      backdropFilter: 'blur(5px)'
                     }}
                   />
                 </div>
