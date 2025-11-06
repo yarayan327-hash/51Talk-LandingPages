@@ -1,0 +1,196 @@
+{
+  "academy": {
+    "content": {
+      "zh": {
+        "hero": {
+          "title": "51Talk Academy 专业英语教育",
+          "subtitle": "为全球学习者提供专业英语课程",
+          "description": "我们致力于为每一位学习者提供最优质的英语教育体验，通过智能化的教学方法和专业的师资团队，帮助您快速提升英语水平。",
+          "ctaText": "立即开始学习"
+        },
+        "features": {
+          "title": "我们的优势",
+          "feature1Title": "专业师资团队",
+          "feature1Desc": "经验丰富的母语教师，持有国际认证证书",
+          "feature2Title": "灵活学习时间",
+          "feature2Desc": "随时随地在线学习，根据自己的节奏安排学习计划",
+          "feature3Title": "个性化学习方案",
+          "feature3Desc": "AI智能推荐系统，根据您的水平和目标定制专属学习路径"
+        },
+        "courses": {
+          "title": "课程体系",
+          "course1Title": "商务英语进阶",
+          "course1Desc": "适合职场人士，提升商务沟通和演讲能力",
+          "course2Title": "雅思冲刺课程",
+          "course2Desc": "系统化雅思备考，听说读写全面覆盖"
+        },
+        "testimonials": {
+          "title": "学员评价",
+          "testimonial1Name": "张先生",
+          "testimonial1Content": "通过51Talk的系统学习，我在3个月内就通过了雅思考试，老师们非常专业！"
+        },
+        "cta": {
+          "title": "准备开始您的英语学习之旅了吗？",
+          "buttonText": "免费试听课程"
+        }
+      },
+      "en": {
+        "hero": {
+          "title": "51Talk Academy Professional English Education",
+          "subtitle": "Professional English courses for global learners",
+          "description": "We are committed to providing the highest quality English education experience for every learner. Through intelligent teaching methods and professional teaching teams, we help you quickly improve your English proficiency.",
+          "ctaText": "Start Learning Now"
+        },
+        "features": {
+          "title": "Our Advantages",
+          "feature1Title": "Professional Teaching Team",
+          "feature1Desc": "Experienced native-speaking teachers with international certifications",
+          "feature2Title": "Flexible Learning Time",
+          "feature2Desc": "Learn online anytime, anywhere, and arrange your study schedule according to your own pace",
+          "feature3Title": "Personalized Learning Plans",
+          "feature3Desc": "AI intelligent recommendation system, customizing exclusive learning paths based on your level and goals"
+        },
+        "courses": {
+          "title": "Course System",
+          "course1Title": "Business English Advanced",
+          "course1Desc": "Suitable for professionals, enhancing business communication and presentation skills",
+          "course2Title": "IELTS Intensive Course",
+          "course2Desc": "Systematic IELTS preparation, comprehensive coverage of listening, speaking, reading, and writing"
+        },
+        "testimonials": {
+          "title": "Student Testimonials",
+          "testimonial1Name": "Mr. Zhang",
+          "testimonial1Content": "Through 51Talk's systematic learning, I passed the IELTS exam in just 3 months. The teachers are very professional!"
+        },
+        "cta": {
+          "title": "Ready to start your English learning journey?",
+          "buttonText": "Free Trial Lesson"
+        }
+      },
+      "ar": {
+        "hero": {
+          "title": "51Talk Academy تعليم الإنجليزية الاحتراف",
+          "subtitle": "دورات إنجليزية احترافية للمتعلمين حول العالم",
+          "description": "نحن ملتزمون بتقديم أفضل تجربة تعليمية باللغة الإنجليزية لكل متعلم. من خلال أساليب التدريب الذكية وفرق التدريب المحترفة، نساعدك على تحسين إتقانك باللغة الإنجليزية بسرعة.",
+          "ctaText": "ابدأ التعلم الآن"
+        },
+        "features": {
+          "title": "ميزاتنا",
+          "feature1Title": "فريق تدريس محترف",
+          "feature1Desc": "معلمون أصليون ذوو خبرة مع شهادات دولية معتمدة",
+          "feature2Title": "وقت تعلم مرن",
+          "feature2Desc": "تعلم عبر الإنترنت في أي وقت ومكان، ورتب جدول الدراسة حسب وتيرتك الخاص",
+          "feature3Title": "خطط تعلم مخصصة",
+          "feature3Desc": "نظام توصية ذكي بالذكاء الاصطناعي، يخصص مسارات تعليمية حصرية بناءً على مستواك وأهدافك"
+        },
+        "courses": {
+          "title": "نظام الدورات",
+          "course1Title": "الإنجليزية التجارية المتقدمة",
+          "course1Desc": "مناسب للمحترفين، يعزز مهارات التواصل التجاري والعرض التقديمي",
+          "course2Title": "دورة الإيلتس المكثفة",
+          "course2Desc": "إعداد منهجي لاختبار الإيلتس، تغطية شاملة للاستماع والتحدث والقراءة والكتابة"
+        },
+        "testimonials": {
+          "title": "تقييمات الطلاب",
+          "testimonial1Name": "السيد تشانغ",
+          "testimonial1Content": "من خلال التعلم المنهجي في 51Talk، نجحت في اجتياز اختبار الإيلتس في 3 أشهر فقط. المعلمون محترفون جدًا!"
+        },
+        "cta": {
+          "title": "هل أنت مستعد لبدء رحلة تعلم اللغة الإنجليزية؟",
+          "buttonText": "درسة تجريبية مجانية"
+        }
+      }
+    },
+    "imageMap": [
+      {
+        "pageId": "academy",
+        "section": "hero",
+        "fieldKey": "title",
+        "imagePath": "/images/academy/hero-title.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "hero",
+        "fieldKey": "subtitle",
+        "imagePath": "/images/academy/hero-subtitle.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "hero",
+        "fieldKey": "ctaText",
+        "imagePath": "/images/academy/hero-button.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "features",
+        "fieldKey": "title",
+        "imagePath": "/images/academy/features-title.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "features",
+        "fieldKey": "feature1Title",
+        "imagePath": "/images/academy/feature-1.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "features",
+        "fieldKey": "feature2Title",
+        "imagePath": "/images/academy/feature-2.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "features",
+        "fieldKey": "feature3Title",
+        "imagePath": "/images/academy/feature-3.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "courses",
+        "fieldKey": "title",
+        "imagePath": "/images/academy/courses-title.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "courses",
+        "fieldKey": "course1Title",
+        "imagePath": "/images/academy/course-1.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "courses",
+        "fieldKey": "course2Title",
+        "imagePath": "/images/academy/course-2.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "testimonials",
+        "fieldKey": "title",
+        "imagePath": "/images/academy/testimonials-title.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "testimonials",
+        "fieldKey": "testimonial1Name",
+        "imagePath": "/images/academy/student-1.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "cta",
+        "fieldKey": "title",
+        "imagePath": "/images/academy/cta-title.png"
+      },
+      {
+        "pageId": "academy",
+        "section": "cta",
+        "fieldKey": "buttonText",
+        "imagePath": "/images/academy/cta-button.png"
+      }
+    ],
+    "stats": {
+      "zh": 21,
+      "en": 21,
+      "ar": 21
+    }
+  }
+}

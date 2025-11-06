@@ -1,0 +1,74 @@
+{
+  "academy": {
+    "Hero": {
+      "Field": "中文",
+      "title": "跟上学校英语进度，从这里开始",
+      "subtitle": "1对1英语同步辅导课，帮助你理解课堂、提升成绩、自信表达。",
+      "ctaText": "了解课程详情 →",
+      "ctaLink": "/consult",
+      "backgroundImage": "温暖教室背景，柔和自然光",
+      "heroImage": "老师微笑着指导学生一起学习笔记"
+    },
+    "PainPoints": {
+      "sectionTitle": "学不好英语？也许不是你的错",
+      "points[0]": "<u>课上跟不懂</u>",
+      "description": "英语不是家长的强项，作业难以指导。",
+      "points[1]": "<u>缺乏练习机会</u>",
+      "points[2]": "<u>家长无法辅导</u>",
+      "backgroundImage": "淡蓝色渐变背景，象征信任与学习"
+    },
+    "Methodology": {
+      "sectionTitle": "我们的教学方法",
+      "description": "基于学校教材的个性化1对1课程，让学生理解更深、成绩更好、自信更强。",
+      "steps[0]": "学校教材同步",
+      "detail": "提供针对性作业与反馈，确保知识掌握。",
+      "steps[1]": "专属老师指导",
+      "steps[2]": "课后巩固练习",
+      "illustrationImage": "老师与学生线上互动白板教学"
+    },
+    "CourseSystem": {
+      "sectionTitle": "课程体系",
+      "description": "每位学生均从水平测试开始，匹配教材与进度，确保每一步都有效。",
+      "courses[0]": "高中同步课程",
+      "level": "A2–B2",
+      "duration": "15课时 × 50分钟",
+      "imagePath": "/images/course_highschool.jpg",
+      "carouselEnabled": true
+    },
+    "Services": {
+      "sectionTitle": "我们的服务",
+      "services[0]": "作业辅导",
+      "description": "系统记录学习情况，教师实时调整内容。",
+      "services[1]": "家长报告",
+      "services[2]": "水平追踪"
+    },
+    "Teachers": {
+      "sectionTitle": "我们的教师",
+      "teachers[0]": "Sarah老师",
+      "title": "英语教育硕士",
+      "intro": "拥有5年K12英语教学经验，擅长激发学生兴趣。",
+      "photo": "/images/teacher_sarah.jpg",
+      "carouselEnabled": true
+    },
+    "About": {
+      "sectionTitle": "关于 51Talk Academy",
+      "description": "我们相信，每个学生都能通过正确的方法爱上英语。",
+      "mission": "帮助学生理解课堂，表达自信。",
+      "vision": "成为中东家庭信赖的英语教育品牌。",
+      "logoImage": "/images/logo_51talk.png",
+      "backgroundImage": "温暖米色背景，体现教育关怀"
+    },
+    "CTA": {
+      "title": "让学习英语变得更简单",
+      "subtitle": "点击下方，与课程顾问聊聊适合你的学习方案。",
+      "buttonText": "咨询课程顾问 →",
+      "buttonLink": "/consult",
+      "backgroundImage": "柔和渐变蓝背景"
+    },
+    "Footer": {
+      "copyright": "© 2025 51Talk Academy 保留所有权利",
+      "links": "首页 / 课程 / 关于我们 / 联系方式",
+      "socialIcons": "WhatsApp / Instagram / X (Twitter)"
+    }
+  }
+}
