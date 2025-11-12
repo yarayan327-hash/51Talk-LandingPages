@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >GradeUp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#26B7FF',
+                        accent: '#FDE700',
+                        'text-primary': '#333333',
+                        'text-secondary': '#666666',
+                        'bg-light': '#F6F6F6'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'button': '50px',
+                        'card': '20px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-text-primary bg-white">
+    <!-- Hero 区域 - 保持现有 -->
+    <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden">
+        <!-- 背景装饰元素 -->
+        <div class="absolute inset-0 bg-pattern opacity-5"></div>
+
+        <!-- 主要内容容器 -->
+        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+            <!-- 主标题 -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"  data-i18n="hero.title">学校教材同步的1对1英语提升课</h1>
+
+            <!-- 副标题描述 -->
+            <p class="text-xl md:text-2xl mb-10 text-text-secondary max-w-3xl mx-auto"  data-i18n="hero.subtitle">阿拉伯语老师更懂孩子，用母语引导理解，一对一陪伴式辅导，安心又有效。</p>
+
+            <!-- CTA按钮组 -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button class="bg-accent text-text-primary font-semibold px-8 py-4 rounded-button hover:bg-accent/90 hover:shadow-lg transition-all duration-300"  data-i18n="hero.cta_primary">立即预约试听</button>
+                <button class="border-2 border-primary text-primary font-semibold px-8 py-4 rounded-button hover:bg-primary hover:text-white transition-all duration-300"  data-i18n="hero.cta_secondary">了解课程详情</button>
+            </div>
+        </div>
+
+        <!-- 装饰元素 -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户痛点区域 (原课程体系介绍位置) -->
+    <section class="py-24 bg-bg-light">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- 标题区域 -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-text-primary"  data-i18n="painpoints.title">学不好英语？也许不是孩子的错</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto"  data-i18n="painpoints.subtitle">方法不对，再努力也难见成效。是时候换一种更适合他们的学习方式。</p>
+            </div>
+
+            <!-- 痛点卡片网格 -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 痛点卡片 1 -->
+                <div class="bg-white rounded-card p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-2 border border-gray-200">
+                    <div class="w-16 h-16 bg-accent/20 rounded-card flex items-center justify-center mb-6 mx-auto">
+                        <div class="text-3xl">😟</div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center text-text-primary"  data-i18n="painpoints.point1_title">听不懂课，跟不上进度？</h3>
+                    <p class="text-text-secondary text-center mb-6"  data-i18n="painpoints.point1_desc">老师讲得快、内容多，没法及时提问和巩固，久而久之形成落差。</p>
+                    <div class="text-center">
+                        <span class="inline-block px-4 py-2 bg-accent text-text-primary rounded-full text-sm font-semibold"  data-i18n="painpoints.point1_tag">影响的不只是分数，更是信心。</span>
+                    </div>
+                </div>
+
+                <!-- 痛点卡片 2 -->
+                <div class="bg-white rounded-card p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-2 border border-gray-200">
+                    <div class="w-16 h-16 bg-accent/20 rounded-card flex items-center justify-center mb-6 mx-auto">
+                        <div class="text-3xl">🗣️</div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center text-text-primary" >学习成了“家庭战场”？</h3>
+                    <p class="text-text-secondary text-center mb-6"  data-i18n="painpoints.point2_desc">当学习变成争吵与压力，强迫只会换来抵触与逃避。</p>
+                    <div class="text-center">
+                        <span class="inline-block px-4 py-2 bg-accent text-text-primary rounded-full text-sm font-semibold"  data-i18n="painpoints.point2_tag">磨掉的，不只是耐心，还有亲子关系。</span>
+                    </div>
+                </div>
+
+                <!-- 痛点卡片 3 -->
+                <div class="bg-white rounded-card p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-2 border border-gray-200">
+                    <div class="w-16 h-16 bg-accent/20 rounded-card flex items-center justify-center mb-6 mx-auto">
+                        <div class="text-3xl">👨‍👩‍👧‍👦</div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center text-text-primary"  data-i18n="painpoints.point3_title">家长想辅导，却力不从心？</h3>
+                    <p class="text-text-secondary text-center mb-6"  data-i18n="painpoints.point3_desc">英语不是强项，课程又更新太快，想辅导孩子却不知道从何下手。</p>
+                    <div class="text-center">
+                        <span class="inline-block px-4 py-2 bg-accent text-text-primary rounded-full text-sm font-semibold"  data-i18n="painpoints.point3_tag">爱很满，但辅导很难。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 我们的方法论 (新增模块) -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- 标题区域 -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-text-primary"  data-i18n="methodology.title">我们的方法论</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto" >更适合沙特学生的个性化学习路径，让孩子从“听懂”到“自信表达”</p>
+            </div>
+
+            <!-- 方法论内容 - 左右交错结构 -->
+            <div class="space-y-16">
+                <!-- 方法论项 1 (左图右文) -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="relative">
+                            <div class="w-full h-64 bg-primary/10 rounded-card flex items-center justify-center">
+                                <div class="text-6xl">🎯</div>
+                            </div>
+                            <div class="absolute -top-4 -left-4 w-8 h-8 bg-accent rounded-full"></div>
+                            <div class="absolute -bottom-4 -right-4 w-8 h-8 bg-accent rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <h3 class="text-2xl font-semibold mb-4" style="color: #26B7FF;" >阿语老师授课，理解更深、学习更快</h3>
+                        <p class="text-text-secondary mb-6" >用学生最熟悉的语言拆解难点，快速突破听说障碍。</p>
+                        <ul class="space-y-2 text-text-secondary">
+                            <li class="flex items-center"><span class="text-accent mr-2">✓</span><span >用母语解构难点，学习效率倍增</span></li>
+                            <li class="flex items-center"><span class="text-accent mr-2">✓</span><span >母语讲解复杂语法，让孩子敢问、爱学，动力更强</span></li>
+                            <li class="flex items-center"><span class="text-accent mr-2">✓</span><span >针对“阿拉伯式英语”发音与思维误区，精准纠正。</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 方法论项 2 (右图左文) -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4" style="color: #26B7FF;" >1对1授课，跟得上，学得会</h3>
+                        <p class="text-text-secondary mb-6" >在这里，您的孩子是课堂的唯一主角，拥有全部的提问和练习机会，让他从“畏惧英语”到“爱上表达”。</p>
+                        <ul class="space-y-2 text-text-secondary">
+                            <li class="flex items-center"><span class="text-accent mr-2">✓</span><span >100% 专注：课堂的每一分钟都只属于您的孩子</span></li>
+                            <li class="flex items-center"><span class="text-accent mr-2">✓</span><span >高强度互动：从“不敢开口”到“自信表达”</span></li>
+                            <li class="flex items-center"><span class="text-accent mr-2">✓</span><span >省时省力，安全在家：告别路途奔波与接送烦恼</span></li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <div class="w-full h-64 bg-primary/10 rounded-card flex items-center justify-center">
+                            <div class="text-6xl">🌍</div>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full"></div>
+                        <div class="absolute -bottom-4 -left-4 w-8 h-8 bg-accent rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- 方法论项 3 (左图右文) -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="relative">
+                            <div class="w-full h-64 bg-primary/10 rounded-card flex items-center justify-center">
+                                <div class="text-6xl">📈</div>
+                            </div>
+                            <div class="absolute -top-4 -left-4 w-8 h-8 bg-accent rounded-full"></div>
+                            <div class="absolute -bottom-4 -right-4 w-8 h-8 bg-accent rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <h3 class="text-2xl font-semibold mb-4" style="color: #26B7FF;" >教材同步学习法：从课本走向语言力</h3>
+                        <p class="text-text-secondary mb-6" >让孩子在完成校内目标的同时，真正掌握英语。</p>
+                        <ul class="space-y-2 text-text-secondary">
+                            <li class="flex items-center"><span class="text-accent mr-2">✓</span><span >变身“课堂明星”，自信从校内开始
+校内自信，是点燃学习热情的最好燃料。</span></li>
+                            <li class="flex items-center"><span class="text-accent mr-2">✓</span><span >锁定核心：聚焦“20%的核心内容”上，撬动“80%的分数与能力”</span></li>
+                            <li class="flex items-center"><span class="text-accent mr-2">✓</span><span >每次作业辅导都是一次“精准诊断”，查漏补缺更高效。</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 师资力量展示 (第4部分) -->
+    <section class="py-24 bg-bg-light">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- 标题区域 -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-text-primary"  data-i18n="teachers.title">阿拉伯师资团队</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto"  data-i18n="teachers.subtitle">教材同步教学 + 母语引导 = 理解更深、信心更强</p>
+            </div>
+
+            <!-- 教师卡片轮播 -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 教师卡片 1 -->
+                <div class="text-center group cursor-pointer">
+                    <div class="relative mb-4 overflow-hidden rounded-card">
+                        <div class="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                            <div class="text-5xl">👩‍🏫</div>
+                        </div>
+                        <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-2 right-2 bg-accent text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-i18n="teachers.badge_certified">
+                            مدرس معتمد
+                        </div>
+                    </div>
+                    <h4 class="font-semibold mb-1 text-text-primary"  data-i18n="teachers.teacher1_name">Sarah</h4>
+                    <p class="text-sm text-text-secondary mb-2"  data-i18n="teachers.teacher1_title">英语教育硕士</p>
+                    <div class="flex justify-center gap-1 text-yellow-400">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+
+                <!-- 教师卡片 2 -->
+                <div class="text-center group cursor-pointer">
+                    <div class="relative mb-4 overflow-hidden rounded-card">
+                        <div class="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                            <div class="text-5xl">👨‍🏫</div>
+                        </div>
+                        <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-2 right-2 bg-accent text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-i18n="teachers.badge_senior">
+                            مدرس أول
+                        </div>
+                    </div>
+                    <h4 class="font-semibold mb-1 text-text-primary"  data-i18n="teachers.teacher2_name">Amira</h4>
+                    <p class="text-sm text-text-secondary mb-2"  data-i18n="teachers.teacher2_title">TESOL认证</p>
+                    <div class="flex justify-center gap-1 text-yellow-400">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+
+                <!-- 教师卡片 3 -->
+                <div class="text-center group cursor-pointer">
+                    <div class="relative mb-4 overflow-hidden rounded-card">
+                        <div class="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                            <div class="text-5xl">👩‍🏫</div>
+                        </div>
+                        <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-2 right-2 bg-accent text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-i18n="teachers.badge_gold">
+                            مدرس ذهبي
+                        </div>
+                    </div>
+                    <h4 class="font-semibold mb-1 text-text-primary"  data-i18n="teachers.teacher3_name">Nada</h4>
+                    <p class="text-sm text-text-secondary mb-2"  data-i18n="teachers.teacher3_title">10年教学经验</p>
+                    <div class="flex justify-center gap-1 text-yellow-400">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+
+                <!-- 教师卡片 4 -->
+                <div class="text-center group cursor-pointer">
+                    <div class="relative mb-4 overflow-hidden rounded-card">
+                        <div class="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                            <div class="text-5xl">👨‍🏫</div>
+                        </div>
+                        <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-2 right-2 bg-accent text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-i18n="teachers.badge_young">
+                            مدرس شاب
+                        </div>
+                    </div>
+                    <h4 class="font-semibold mb-1 text-text-primary"  data-i18n="teachers.teacher4_name">Ahmed</h4>
+                    <p class="text-sm text-text-secondary mb-2"  data-i18n="teachers.teacher4_title">儿童教育专家</p>
+                    <div class="flex justify-center gap-1 text-yellow-400">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品卖点模块 (新增) -->
+    <section>
+        <!-- 课程体系部分 -->
+        <div class="py-24 bg-bg-light">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- 标题区域 -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-text-primary" >课程体系</h2>
+                    <p class="text-xl text-text-secondary max-w-2xl mx-auto" >针对不同需求，提供专业化课程选择</p>
+                </div>
+
+                <!-- 课程卡片网格 -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- 课程卡片 1: 求职版 -->
+                    <div class="bg-white rounded-card p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-16 h-16 bg-primary/10 rounded-card flex items-center justify-center mb-6">
+                            <div class="text-2xl">💼</div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-text-primary" >GradeUp·基础提升班</h3>
+                        <p class="text-text-secondary mb-6" >针对基础薄弱学生，快速补齐学校知识漏洞，重新建立学习信心。</p>
+                        <div class="mb-6">
+                            <div class="text-accent font-bold text-2xl mb-2" >25 课时（每课时 50 分钟）</div>
+                            <div class="text-text-secondary text-sm" >夯实基础，从“听得懂”开始。</div>
+                        </div>
+                        <ul class="space-y-2 text-sm text-text-secondary mb-6">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span><span >阿语老师讲解难点，彻底弄懂语法与词汇。</span></li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span><span >课堂全程1对1，孩子不掉队。</span></li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span><span >针对学校教材同步讲练，成绩明显提升。</span></li>
+                        </ul>
+                        <button class="w-full bg-primary text-white font-semibold px-6 py-3 rounded-button hover:bg-primary/90 transition-all duration-300" >立即报名</button>
+                    </div>
+
+                    <!-- 课程卡片 2: 在职版 -->
+                    <div class="bg-white rounded-card p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-16 h-16 bg-primary/10 rounded-card flex items-center justify-center mb-6">
+                            <div class="text-2xl">🏢</div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-text-primary" >GradeUp·进阶提升班</h3>
+                        <p class="text-text-secondary mb-6" >全面覆盖学校教材内容，强化听说读写，帮助学生系统提升成绩与表达能力。</p>
+                        <div class="mb-6">
+                            <div class="text-accent font-bold text-2xl mb-2" >50 课时（每课时 50 分钟）</div>
+                            <div class="text-text-secondary text-sm" >从“跟得上”到“超前学”。</div>
+                        </div>
+                        <ul class="space-y-2 text-sm text-text-secondary mb-6">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span><span >学校教材全覆盖，课内外同步巩固。</span></li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span><span >老师1对1讲解与作业辅导，学习更扎实。</span></li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span><span >每月家长报告，进步看得见。</span></li>
+                        </ul>
+                        <button class="w-full bg-primary text-white font-semibold px-6 py-3 rounded-button hover:bg-primary/90 transition-all duration-300" >获取学习方案 →</button>
+                    </div>
+
+                    <!-- 课程卡片 3: 专项提升 -->
+                    <div class="bg-white rounded-card p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-16 h-16 bg-primary/10 rounded-card flex items-center justify-center mb-6">
+                            <div class="text-2xl">🎯</div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-text-primary" >GradeUp·全学年进阶班</h3>
+                        <p class="text-text-secondary mb-6" >针对全年学习目标设计，覆盖所有教材章节与重点考试内容，实现从理解到运用的全面突破。</p>
+                        <div class="mb-6">
+                            <div class="text-accent font-bold text-2xl mb-2" >70 课时（每课时 50 分钟）</div>
+                            <div class="text-text-secondary text-sm" >一学期系统学习，让成绩稳步提升。</div>
+                        </div>
+                        <ul class="space-y-2 text-sm text-text-secondary mb-6">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span><span >全程规划，全面覆盖教材与考试要点。</span></li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span><span >阿语老师+个性化追踪，学习更稳更准。</span></li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span><span >持续家长反馈与学习报告，成长过程清晰可见。</span></li>
+                        </ul>
+                        <button class="w-full bg-primary text-white font-semibold px-6 py-3 rounded-button hover:bg-primary/90 transition-all duration-300" >咨询顾问了解详情 →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 服务体系部分 -->
+        <div class="py-24" style="background-color: #26B7FF;">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- 标题区域 -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white" >全方位学习陪伴体系</h2>
+                    <p class="text-xl text-white/90 max-w-2xl mx-auto" >不止上课，我们用全过程支持，让孩子学得懂、家长看得见。</p>
+                </div>
+
+                <!-- 服务特性网格 -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- 服务项 1 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-6">
+                            <div class="text-3xl">👥</div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white" >1对1专属辅导</h3>
+                        <p class="text-white/80" >专属一对一教学，个性化关注每个学生</p>
+                    </div>
+
+                    <!-- 服务项 2 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-6">
+                            <div class="text-3xl">📊</div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white" >作业辅导支持</h3>
+                        <p class="text-white/80" >老师跟进作业，讲解错题思路，帮助学生巩固课堂知识、避免重复错误。</p>
+                    </div>
+
+                    <!-- 服务项 3 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-6">
+                            <div class="text-3xl">🤖</div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white" >家长专属旁听链接</h3>
+                        <p class="text-white/80" >每位家长都能实时旁听课堂，了解孩子学习情况，放心又安心。</p>
+                    </div>
+
+                    <!-- 服务项 4 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-6">
+                            <div class="text-3xl">📚</div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white" >课程回放服务</h3>
+                        <p class="text-white/80" >在家长允许的前提下，每节课都可提供安全录制，方便学生复习、家长回看</p>
+                    </div>
+
+                    <!-- 服务项 5 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-6">
+                            <div class="text-3xl">🏆</div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white" >阶段学习报告</h3>
+                        <p class="text-white/80" >每月输出学习进展报告，清晰呈现孩子的提升路径与下阶段目标。</p>
+                    </div>
+
+                    <!-- 服务项 6 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-6">
+                            <div class="text-3xl">💬</div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white" >真人学习助手</h3>
+                        <p class="text-white/80" >24 小时内答疑解惑，随时巩固学习内容，让学习不间断。</p>
+                    </div>
+                </div>
+
+                <!-- CTA按钮 -->
+                <div class="text-center mt-12">
+                    <button class="bg-accent text-text-primary font-semibold px-8 py-4 rounded-button hover:bg-accent/90 hover:shadow-lg transition-all duration-300" >了解完整支持体系 →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学习路径规划 (保持现有) -->
+    <section class="py-24 bg-bg-light">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-text-primary" >学习路径规划</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto" >从入学测评到成果展示，孩子的每一步都有清晰方向。</p>
+            </div>
+
+            <!-- 时间轴组件 -->
+            <div class="relative">
+                <!-- 时间轴线 -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary/20"></div>
+
+                <!-- 时间轴节点 -->
+                <div class="space-y-12">
+                    <!-- 节点 1 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <h3 class="text-xl font-semibold mb-2 text-text-primary" >入学测评</h3>
+                            <p class="text-text-secondary" >系统诊断英语水平，确定起点，匹配合适教材与老师。</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold z-10">
+                            1
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <!-- 节点 2 - 当前阶段高亮 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-accent rounded-full flex items-center justify-center text-text-primary font-bold z-10 border-4 border-accent">
+                            2
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <h3 class="text-xl font-semibold mb-2 text-text-primary" >个性化学习阶段</h3>
+                            <p class="text-text-secondary" >1对1定制课程，按学校进度稳步推进，每一步都在成长。</p>
+                        </div>
+                    </div>
+
+                    <!-- 节点 3 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <h3 class="text-xl font-semibold mb-2 text-text-primary" >阶段测评与反馈</h3>
+                            <p class="text-text-secondary" >定期评估学习效果，老师与家长共同跟进，及时调整方向。</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold z-10">
+                            3
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <!-- 节点 4 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-accent rounded-full flex items-center justify-center text-text-primary font-bold z-10">
+                            4
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <h3 class="text-xl font-semibold mb-2 text-text-primary" >成果展示与进步报告</h3>
+                            <p class="text-text-secondary" >输出阶段性报告，让进步可见，让努力有成就感。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 优惠活动区域 (保持现有) -->
+    <section class="py-20 bg-gradient-to-r from-primary to-accent/20 text-text-primary">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-text-primary" >限时优惠活动</h2>
+            <p class="text-xl mb-8 text-text-primary" >现在报名享受超值优惠</p>
+
+            <!-- 价格对比 -->
+            <div class="bg-white rounded-card p-8 max-w-md mx-auto mb-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-text-primary mb-2">
+                        <span class="text-2xl line-through text-text-secondary" >2999 SAR</span>
+                        <span class="text-accent" >2999 SAR</span>
+                    </div>
+                    <p class="text-text-secondary mb-6" >立省1000，仅限前100名</p>
+                    <button class="w-full bg-accent text-text-primary font-semibold px-8 py-4 rounded-button hover:bg-accent/90 hover:shadow-lg transition-all duration-300" >立即抢购</button>
+                </div>
+            </div>
+
+            <!-- 倒计时 -->
+            <div class="text-text-primary">
+                <p class="mb-4 font-semibold" >优惠倒计时</p>
+                <div class="flex justify-center gap-4">
+                    <div class="bg-white/20 backdrop-blur rounded-lg p-4 min-w-[60px]">
+                        <div class="text-2xl font-bold" style="color: #FDE700;">02</div>
+                        <div class="text-sm" >天</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur rounded-lg p-4 min-w-[60px]">
+                        <div class="text-2xl font-bold" style="color: #FDE700;">15</div>
+                        <div class="text-sm" >时</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur rounded-lg p-4 min-w-[60px]">
+                        <div class="text-2xl font-bold" style="color: #FDE700;">34</div>
+                        <div class="text-sm" >分</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur rounded-lg p-4 min-w-[60px]">
+                        <div class="text-2xl font-bold" style="color: #FDE700;">56</div>
+                        <div class="text-sm" >秒</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚区域 (保持现有) -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- 公司信息 -->
+                <div>
+                    <h4 class="font-semibold mb-4" >51Talk Academy</h4>
+                    <p class="text-sm text-gray-300" >专业的全球在线英语教育平台，致力于为学习者提供高质量的培训服务。</p>
+                </div>
+
+                <!-- 快速链接 -->
+                <div>
+                    <h4 class="font-semibold mb-4" >快速链接</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors" >关于我们</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors" >课程体系</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors" >师资团队</a></li>
+                    </ul>
+                </div>
+
+                <!-- 联系方式 -->
+                <div>
+                    <h4 class="font-semibold mb-4" >联系我们</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li >客服热线：966 115078062</li>
+                        <li >邮箱：service@51talk.com</li>
+                        <li >地址：Al Imam Saud Ibn Abdulaziz Branch Rd, King Fahd, Riyadh 12274沙特阿拉伯</li>
+                    </ul>
+                </div>
+
+                <!-- 社交媒体 -->
+                <div>
+                    <h4 class="font-semibold mb-4" >关注我们</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <span>f</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <span>t</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <span>in</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 版权信息 -->
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                <p >{{copyright_text}}</p>
+            </div>
+        </div>
+    </footer>
+<script>
+
+    // GradeUp多语言翻译数据
+    const translations = {
+  "zh": {
+    "meta.title": "GradeUp",
+    "hero.title": "学校教材同步的1对1英语提升课",
+    "hero.subtitle": "阿拉伯语老师更懂孩子，用母语引导理解，一对一陪伴式辅导，安心又有效。",
+    "hero.cta_primary": "立即预约试听",
+    "hero.cta_secondary": "了解课程详情",
+    "painpoints.title": "学不好英语？也许不是孩子的错",
+    "painpoints.subtitle": "方法不对，再努力也难见成效。是时候换一种更适合他们的学习方式。",
+    "painpoints.point1_title": "听不懂课，跟不上进度？",
+    "painpoints.point1_desc": "老师讲得快、内容多，没法及时提问和巩固，久而久之形成落差。",
+    "painpoints.point1_tag": "影响的不只是分数，更是信心。",
+    "painpoints.point2_title": "学习成了“家庭战场”？",
+    "painpoints.point2_desc": "当学习变成争吵与压力，强迫只会换来抵触与逃避。",
+    "painpoints.point2_tag": "磨掉的，不只是耐心，还有亲子关系。",
+    "painpoints.point3_title": "家长想辅导，却力不从心？",
+    "painpoints.point3_desc": "英语不是强项，课程又更新太快，想辅导孩子却不知道从何下手。",
+    "painpoints.point3_tag": "爱很满，但辅导很难。",
+    "methodology.title": "我们的方法论",
+    "methodology.subtitle": "更适合沙特学生的个性化学习路径，让孩子从“听懂”到“自信表达”",
+    "methodology.method1_title": "阿语老师授课，理解更深、学习更快",
+    "methodology.method1_desc": "用学生最熟悉的语言拆解难点，快速突破听说障碍。",
+    "methodology.method1_feature1": "用母语解构难点，学习效率倍增",
+    "methodology.method1_feature2": "母语讲解复杂语法，让孩子敢问、爱学，动力更强",
+    "methodology.method1_feature3": "针对“阿拉伯式英语”发音与思维误区，精准纠正。",
+    "methodology.method2_title": "1对1授课，跟得上，学得会",
+    "methodology.method2_desc": "在这里，您的孩子是课堂的唯一主角，拥有全部的提问和练习机会，让他从“畏惧英语”到“爱上表达”。",
+    "methodology.method2_feature1": "100% 专注：课堂的每一分钟都只属于您的孩子",
+    "methodology.method2_feature2": "高强度互动：从“不敢开口”到“自信表达”",
+    "methodology.method2_feature3": "省时省力，安全在家：告别路途奔波与接送烦恼",
+    "methodology.method3_title": "教材同步学习法：从课本走向语言力",
+    "methodology.method3_desc": "让孩子在完成校内目标的同时，真正掌握英语。",
+    "methodology.method3_feature1": "变身“课堂明星”，自信从校内开始\n校内自信，是点燃学习热情的最好燃料。",
+    "methodology.method3_feature2": "锁定核心：聚焦“20%的核心内容”上，撬动“80%的分数与能力”",
+    "methodology.method3_feature3": "每次作业辅导都是一次“精准诊断”，查漏补缺更高效。",
+    "teachers.title": "阿拉伯师资团队",
+    "teachers.subtitle": "教材同步教学 + 母语引导 = 理解更深、信心更强",
+    "teachers.badge_certified": "认证教师",
+    "teachers.teacher1_name": "Sarah",
+    "teachers.teacher1_title": "英语教育硕士",
+    "teachers.badge_senior": "资深教师",
+    "teachers.teacher2_name": "Amira",
+    "teachers.teacher2_title": "TESOL认证",
+    "teachers.badge_gold": "金牌教师",
+    "teachers.teacher3_name": "Nada",
+    "teachers.teacher3_title": "10年教学经验",
+    "teachers.badge_young": "青年教师",
+    "teachers.teacher4_name": "Ahmed",
+    "teachers.teacher4_title": "儿童教育专家",
+    "courses.title": "课程体系",
+    "courses.subtitle": "针对不同需求，提供专业化课程选择",
+    "courses.job_title": "GradeUp·基础提升班",
+    "courses.job_desc": "针对基础薄弱学生，快速补齐学校知识漏洞，重新建立学习信心。",
+    "courses.job_duration": "25 课时（每课时 50 分钟）",
+    "courses.job_subtitle": "夯实基础，从“听得懂”开始。",
+    "courses.job_feature1": "阿语老师讲解难点，彻底弄懂语法与词汇。",
+    "courses.job_feature2": "课堂全程1对1，孩子不掉队。",
+    "courses.job_feature3": "针对学校教材同步讲练，成绩明显提升。",
+    "courses.job_button": "立即报名",
+    "courses.work_title": "GradeUp·进阶提升班",
+    "courses.work_desc": "全面覆盖学校教材内容，强化听说读写，帮助学生系统提升成绩与表达能力。",
+    "courses.work_duration": "50 课时（每课时 50 分钟）",
+    "courses.work_subtitle": "从“跟得上”到“超前学”。",
+    "courses.work_feature1": "学校教材全覆盖，课内外同步巩固。",
+    "courses.work_feature2": "老师1对1讲解与作业辅导，学习更扎实。",
+    "courses.work_feature3": "每月家长报告，进步看得见。",
+    "courses.work_button": "获取学习方案 →",
+    "courses.special_title": "GradeUp·全学年进阶班",
+    "courses.special_desc": "针对全年学习目标设计，覆盖所有教材章节与重点考试内容，实现从理解到运用的全面突破。",
+    "courses.special_duration": "70 课时（每课时 50 分钟）",
+    "courses.special_subtitle": "一学期系统学习，让成绩稳步提升。",
+    "courses.special_feature1": "全程规划，全面覆盖教材与考试要点。",
+    "courses.special_feature2": "阿语老师+个性化追踪，学习更稳更准。",
+    "courses.special_feature3": "持续家长反馈与学习报告，成长过程清晰可见。",
+    "courses.special_button": "咨询顾问了解详情 →",
+    "services.title": "全方位学习陪伴体系",
+    "services.subtitle": "不止上课，我们用全过程支持，让孩子学得懂、家长看得见。",
+    "services.service1_title": "1对1专属辅导",
+    "services.service1_desc": "专属一对一教学，个性化关注每个学生",
+    "services.service2_title": "作业辅导支持",
+    "services.service2_desc": "老师跟进作业，讲解错题思路，帮助学生巩固课堂知识、避免重复错误。",
+    "services.service3_title": "家长专属旁听链接",
+    "services.service3_desc": "每位家长都能实时旁听课堂，了解孩子学习情况，放心又安心。",
+    "services.service4_title": "课程回放服务",
+    "services.service4_desc": "在家长允许的前提下，每节课都可提供安全录制，方便学生复习、家长回看",
+    "services.service5_title": "阶段学习报告",
+    "services.service5_desc": "每月输出学习进展报告，清晰呈现孩子的提升路径与下阶段目标。",
+    "services.service6_title": "真人学习助手",
+    "services.service6_desc": "24 小时内答疑解惑，随时巩固学习内容，让学习不间断。",
+    "services.cta_button": "了解完整支持体系 →",
+    "learning_path.title": "学习路径规划",
+    "learning_path.subtitle": "从入学测评到成果展示，孩子的每一步都有清晰方向。",
+    "learning_path.step1_title": "入学测评",
+    "learning_path.step1_desc": "系统诊断英语水平，确定起点，匹配合适教材与老师。",
+    "learning_path.step2_title": "个性化学习阶段",
+    "learning_path.step2_desc": "1对1定制课程，按学校进度稳步推进，每一步都在成长。",
+    "learning_path.step3_title": "阶段测评与反馈",
+    "learning_path.step3_desc": "定期评估学习效果，老师与家长共同跟进，及时调整方向。",
+    "learning_path.step4_title": "成果展示与进步报告",
+    "learning_path.step4_desc": "输出阶段性报告，让进步可见，让努力有成就感。",
+    "promotion.title": "限时优惠活动",
+    "promotion.subtitle": "现在报名享受超值优惠",
+    "promotion.original_price": "2999 SAR",
+    "promotion.discount_price": "2999 SAR",
+    "promotion.savings": "立省1000，仅限前100名",
+    "promotion.cta_button": "立即抢购",
+    "promotion.countdown_title": "优惠倒计时",
+    "promotion.days_label": "天",
+    "promotion.hours_label": "时",
+    "promotion.minutes_label": "分",
+    "promotion.seconds_label": "秒",
+    "footer.company_name": "51Talk Academy",
+    "footer.company_desc": "专业的全球在线英语教育平台，致力于为学习者提供高质量的培训服务。",
+    "footer.quick_links_title": "快速链接",
+    "footer.link_about": "关于我们",
+    "footer.link_courses": "课程体系",
+    "footer.link_teachers": "师资团队",
+    "footer.contact_title": "联系我们",
+    "footer.contact_phone": "客服热线：966 115078062",
+    "footer.contact_email": "邮箱：service@51talk.com",
+    "footer.contact_address": "地址：Al Imam Saud Ibn Abdulaziz Branch Rd, King Fahd, Riyadh 12274沙特阿拉伯",
+    "footer.social_title": "关注我们",
+    "footer.copyright": "footer.copyright"
+  },
+  "en": {
+    "meta.title": "GradeUp",
+    "hero.title": "1-on-1 English Improvement Program Aligned with School Curriculum",
+    "hero.subtitle": "Arabic-speaking teachers who truly understand children — guiding them in their native language for deeper understanding and faster progress.",
+    "hero.cta_primary": "Book Trial Lesson",
+    "hero.cta_secondary": "Learn More About the Program",
+    "painpoints.title": "Struggling with English? It might not be your child’s fault.",
+    "painpoints.subtitle": "When the method is wrong, even the hardest work won’t bring real results.\nIt’s time to switch to a learning path that truly fits your child.",
+    "painpoints.point1_title": "Can’t keep up in class?",
+    "painpoints.point1_desc": "Fast-paced lessons and heavy content leave students unable to ask questions or consolidate what they learn — causing bigger gaps over time.",
+    "painpoints.point1_tag": "The result? Lower grades and fading confidence.",
+    "painpoints.point2_title": "Has learning turned into a “family battlefield”?",
+    "painpoints.point2_desc": "When studying becomes a source of tension, pressure only leads to resistance and avoidance.",
+    "painpoints.point2_tag": "What’s lost isn’t just patience — it’s the parent-child bond.",
+    "painpoints.point3_title": "Want to help but don’t know how?",
+    "painpoints.point3_desc": "English isn’t your strength, and school materials keep changing.You want to help, but you don’t know where to start.",
+    "painpoints.point3_tag": "The love is full — but tutoring feels impossible.",
+    "methodology.title": "Our Methodology",
+    "methodology.subtitle": "A personalized learning path designed for Saudi students — helping them move from understanding to confident expression.",
+    "methodology.method1_title": "Arabic-speaking teachers for faster understanding",
+    "methodology.method1_desc": "By explaining concepts in the student’s most familiar language, we help them overcome listening and speaking barriers quickly.",
+    "methodology.method1_feature1": "Native-language explanations for higher efficiency",
+    "methodology.method1_feature2": "Complex grammar made simple in Arabic — students feel more confident to ask, learn, and stay motivated.",
+    "methodology.method1_feature3": "We also correct pronunciation and thought-pattern errors common among Arabic learners of English.",
+    "methodology.method2_title": "True 1-on-1 classes — learning at your child’s pace",
+    "methodology.method2_desc": "Your child is the only focus of the class, with every minute dedicated to their progress — from fearing English to loving communication.",
+    "methodology.method2_feature1": "100% Focus: Every minute belongs entirely to your child.",
+    "methodology.method2_feature2": "High Interaction: From “afraid to speak” to “confident expression.”",
+    "methodology.method2_feature3": "Safe at Home: No traffic, no stress — learn comfortably online.",
+    "methodology.method3_title": "Textbook-Synchronized Learning Method",
+    "methodology.method3_desc": "Helping your child not only meet school goals but truly master English.",
+    "methodology.method3_feature1": "Become a classroom star — confidence starts at school.\nConfidence in school is the best fuel for long-term motivation.",
+    "methodology.method3_feature2": "Core Focus: Master the 20% of key content that drives 80% of results.",
+    "methodology.method3_feature3": "Every homework review acts as a precise diagnosis to fix weaknesses efficiently.",
+    "teachers.title": "Our Teachers",
+    "teachers.subtitle": "Textbook-Aligned Teaching + Native-Language Guidance = Deeper Understanding, Greater Confidence",
+    "teachers.badge_certified": "Certified Teacher",
+    "teachers.teacher1_name": "Sarah",
+    "teachers.teacher1_title": "Master's in English Education",
+    "teachers.badge_senior": "Senior Teacher",
+    "teachers.teacher2_name": "Amira",
+    "teachers.teacher2_title": "TESOL Certified",
+    "teachers.badge_gold": "Gold Teacher",
+    "teachers.teacher3_name": "Nada",
+    "teachers.teacher3_title": "10 years teaching experience",
+    "teachers.badge_young": "Young Teacher",
+    "teachers.teacher4_name": "Ahmed",
+    "teachers.teacher4_title": "Children's education expert",
+    "courses.title": "Course System",
+    "courses.subtitle": "Specialized course options for different needs",
+    "courses.job_title": "GradeUp · Foundation Program",
+    "courses.job_desc": "For students with weak basics — quickly fill knowledge gaps and rebuild learning confidence.",
+    "courses.job_duration": "25 lessons (50 minutes each)",
+    "courses.job_subtitle": "Strengthen fundamentals — start from understanding.",
+    "courses.job_feature1": "Arabic-speaking teachers explain grammar and vocabulary clearly.",
+    "courses.job_feature2": "Full 1-on-1 class — no student left behind.",
+    "courses.job_feature3": "Aligned with school textbooks for visible grade improvement.",
+    "courses.job_button": "Enroll Now",
+    "courses.work_title": "GradeUp · Advanced Program",
+    "courses.work_desc": "Covers all school textbook content while improving listening, speaking, reading, and writing.",
+    "courses.work_duration": "50 lessons (50 minutes each)",
+    "courses.work_subtitle": "From “keeping up” to “learning ahead.”",
+    "courses.work_feature1": "Full textbook coverage with in-class and after-class reinforcement.",
+    "courses.work_feature2": "1-on-1 instruction and homework guidance for solid progress.",
+    "courses.work_feature3": "Monthly parent reports to see clear improvement.",
+    "courses.work_button": "Get Your Study Plan →",
+    "courses.special_title": "GradeUp · Full-Year Program",
+    "courses.special_desc": "Designed for year-round progress, covering all textbook chapters and key exam topics.",
+    "courses.special_duration": "70 lessons (50 minutes each)",
+    "courses.special_subtitle": "Semester-long structured learning for stable improvement.",
+    "courses.special_feature1": "Full curriculum coverage with exam-focused review.",
+    "courses.special_feature2": "Arabic teachers + personalized progress tracking for accurate results.",
+    "courses.special_feature3": "Continuous parent feedback and progress reports for transparent growth.",
+    "courses.special_button": "Contact Our Consultant →",
+    "services.title": "Comprehensive Learning Support System",
+    "services.subtitle": "We support not just in class — but through the entire learning journey, making progress visible to both students and parents.",
+    "services.service1_title": "1-on-1 Tutoring",
+    "services.service1_desc": "Personalized attention for every learner.",
+    "services.service2_title": "Homework Support",
+    "services.service2_desc": "Teachers explain mistakes and strengthen understanding.",
+    "services.service3_title": "Parent Viewing Link",
+    "services.service3_desc": "Parents can watch classes in real time for peace of mind.",
+    "services.service4_title": "Class Replay",
+    "services.service4_desc": "Safe recording available upon parental approval for easy review.",
+    "services.service5_title": "Progress Reports",
+    "services.service5_desc": "Monthly reports show progress and next-step goals.",
+    "services.service6_title": "Learning Assistant",
+    "services.service6_desc": "Q&A support to ensure continuous learning.",
+    "services.cta_button": "Learn About Complete Services",
+    "learning_path.title": "Learning Path",
+    "learning_path.subtitle": "From entry assessment to achievement — every step is clear.",
+    "learning_path.step1_title": "Initial Assessment",
+    "learning_path.step1_desc": "Diagnose English level and match the right materials and teacher.",
+    "learning_path.step2_title": "Personalized Learning",
+    "learning_path.step2_desc": "1-on-1 customized lessons aligned with school pace.",
+    "learning_path.step3_title": "Progress Evaluation",
+    "learning_path.step3_desc": "Regular tests and teacher-parent feedback loops.",
+    "learning_path.step4_title": "Achievement Report",
+    "learning_path.step4_desc": "Reports showing visible progress and effort.",
+    "promotion.title": "Limited-Time Offer",
+    "promotion.subtitle": "Now only 2,980 SAR",
+    "promotion.original_price": "3980 SAR",
+    "promotion.discount_price": "2980 SAR",
+    "promotion.savings": "(Save 1,000SAR!)",
+    "promotion.cta_button": "立即抢购",
+    "promotion.countdown_title": "Offer Ends In:",
+    "promotion.days_label": "Days",
+    "promotion.hours_label": "Hours",
+    "promotion.minutes_label": "Minutes",
+    "promotion.seconds_label": "Seconds",
+    "footer.company_name": "51Talk Academy",
+    "footer.company_desc": "A global online English education platform dedicated to delivering high-quality English training for learners worldwide.",
+    "footer.quick_links_title": "Quick Links",
+    "footer.link_about": "About Us",
+    "footer.link_courses": "Course System",
+    "footer.link_teachers": "Teachers",
+    "footer.contact_title": "Contact Us",
+    "footer.contact_phone": "Customer Service：+966115078062",
+    "footer.contact_email": "Mail：service@51talk.com",
+    "footer.contact_address": "Al Imam Saud Ibn Abdulaziz Branch Rd, King Fahd, Riyadh 12274, Saudi Arabia",
+    "footer.social_title": "Follow Us",
+    "footer.copyright": "footer.copyright"
+  },
+  "ar": {
+    "meta.title": "GradeUp",
+    "hero.title": "دورة تحسين اللغة الإنجليزية الفردية المتوافقة مع مناهج المدارس",
+    "hero.subtitle": "معلمون عرب يفهمون الأطفال حقًا — يشرحون بلغتهم الأم لتسهيل الفهم وتسريع التقدم.دروس فردية واحد لواحد، فعّالة، مريحة، وتبني الثقة بالنفس.",
+    "hero.cta_primary": "احجز تجربة مجانية الآن",
+    "hero.cta_secondary": "تعرّف على تفاصيل البرنامج",
+    "painpoints.title": "صعوبة في تعلم الإنجليزية؟ قد لا تكون المشكلة في طفلك.",
+    "painpoints.subtitle": "لقد حان الوقت لتجربة أسلوب تعلم يناسب طفلك حقًا.",
+    "painpoints.point1_title": "لا يستطيع مجاراة الدروس في المدرسة؟",
+    "painpoints.point1_desc": "سرعة الشرح وكثرة المحتوى تمنع الطفل من طرح الأسئلة أو ترسيخ المعلومات، ومع الوقت تتسع الفجوة.",
+    "painpoints.point1_tag": "النتيجة؟ ضعف الدرجات وتراجع الثقة بالنفس.",
+    "painpoints.point2_title": "هل تحوّل التعلم إلى “معركة منزلية”？",
+    "painpoints.point2_desc": "عندما يصبح التعلم مصدر توتر وخلاف، فإن الضغط يولّد مقاومة وهروبًا.",
+    "painpoints.point2_tag": "ما يُستنزف ليس الصبر فقط، بل العلاقة بين الأهل والطفل أيضًا.",
+    "painpoints.point3_title": "تريد مساعدة طفلك، لكنك لا تعرف من أين تبدأ؟",
+    "painpoints.point3_desc": "تحب طفلك كثيرًا، لكن الإنجليزية ليست نقطتك القوية، والمناهج تتغير بسرعة.",
+    "painpoints.point3_tag": "المحبة كبيرة، لكن الدعم صعب.",
+    "methodology.title": "منهجنا التعليمي",
+    "methodology.subtitle": "مسار تعليمي شخصي مصمم خصيصًا للطلاب السعوديين — من الفهم إلى الثقة في التعبير.",
+    "methodology.method1_title": "معلمون عرب للفهم الأسرع",
+    "methodology.method1_desc": "من خلال الشرح بلغة مألوفة للطالب، نساعده على تجاوز عقبات الاستماع والتحدث بسرعة.",
+    "methodology.method1_feature1": "شرح بلغة الأم لفعالية أعلى",
+    "methodology.method1_feature2": "نُبسّط القواعد المعقدة بالعربية — ليشعر الطالب بالثقة في طرح الأسئلة والتعلّم بحماس أكبر.",
+    "methodology.method1_feature3": "كما نصحّح الأخطاء الشائعة في النطق والتفكير الناتجة عن “الإنجليزية على الطريقة العربية”.",
+    "methodology.method2_title": "دروس فردية حقيقية — بالوتيرة المناسبة لطفلك",
+    "methodology.method2_desc": "طفلك هو محور الصف الوحيد، وكل دقيقة مخصصة لتقدّمه — من الخوف من الإنجليزية إلى حب التعبير.",
+    "methodology.method2_feature1": "تركيز 100٪: كل دقيقة من الدرس مخصصة لطفلك فقط.",
+    "methodology.method2_feature2": "تفاعل قوي: من “الخجل من التحدث” إلى “التعبير بثقة”.",
+    "methodology.method2_feature3": "تعلم آمن في المنزل: لا حاجة للتنقل أو الإزعاج — التعلم براحة وأمان.",
+    "methodology.method3_title": "منهج التعلم المتزامن مع الكتاب المدرسي",
+    "methodology.method3_desc": "نساعد طفلك على تحقيق أهدافه الدراسية مع اكتساب مهارات لغوية حقيقية.",
+    "methodology.method3_feature1": "كن نجم الفصل — فالثقة تبدأ من المدرسة.الثقة داخل المدرسة هي الوقود الأفضل للتحفيز المستمر.",
+    "methodology.method3_feature2": "التركيز على الأساس: نتعلم الـ20٪ من المحتوى الأساسي الذي ينتج 80٪ من النتائج.",
+    "methodology.method3_feature3": "كل مراجعة للواجب هي “تشخيص دقيق” لتصحيح الأخطاء وتحسين الفهم بكفاءة.",
+    "teachers.title": "فريق المعلمين",
+    "teachers.subtitle": "التدريس المتوافق مع المناهج + التوجيه بلغة الأم = فهم أعمق وثقة أقوى",
+    "teachers.badge_certified": "المعلمين المعتمدين",
+    "teachers.teacher1_name": "سارة",
+    "teachers.teacher1_title": "ماجستير في تعليم اللغة الإنجليزية",
+    "teachers.badge_senior": "معلمة خبيرة",
+    "teachers.teacher2_name": "أميرة",
+    "teachers.teacher2_title": "شهادة TESOL",
+    "teachers.badge_gold": "معلمة متميزة",
+    "teachers.teacher3_name": "ندى",
+    "teachers.teacher3_title": "خبرة 10 سنوات في التدريس",
+    "teachers.badge_young": "معلمة شابة",
+    "teachers.teacher4_name": "أحمد",
+    "teachers.teacher4_title": "خبير في تعليم الأطفال",
+    "courses.title": "البرامج الدراسية",
+    "courses.subtitle": "توفير خيارات لدورات متخصصة تلبي الاحتياجات المختلفة.",
+    "courses.job_title": "GradeUp · برنامج الأساسيات",
+    "courses.job_desc": "للطلاب الذين يواجهون ضعفًا في الأساسيات — لسد الثغرات بسرعة واستعادة الثقة في التعلم.",
+    "courses.job_duration": "25 حصة (كل حصة 50 دقيقة)",
+    "courses.job_subtitle": "تعزيز الأساسيات — البداية من الفهم الحقيقي.",
+    "courses.job_feature1": "شرح النقاط الصعبة بالعربية لفهم القواعد والمفردات بعمق.",
+    "courses.job_feature2": "صفوف فردية 1 على 1 — لا أحد يتخلف عن الركب.",
+    "courses.job_feature3": "تدريب متزامن مع المنهج المدرسي لرفع الدرجات بشكل ملموس.",
+    "courses.job_button": "سجّل الآن",
+    "courses.work_title": "GradeUp · برنامج التقدم المتكامل",
+    "courses.work_desc": "يغطي جميع محتويات المنهج المدرسي ويقوّي مهارات الاستماع والتحدث والقراءة والكتابة.",
+    "courses.work_duration": "50 حصة (كل حصة 50 دقيقة)",
+    "courses.work_subtitle": "من “مجاراة الدروس” إلى “التقدّم المسبق”.",
+    "courses.work_feature1": "تغطية شاملة للمنهج مع مراجعة داخل الصف وخارجه.",
+    "courses.work_feature2": "شرح فردي ومتابعة للواجبات لنتائج أكثر رسوخًا.",
+    "courses.work_feature3": "تقارير شهرية للوالدين لمتابعة التقدّم بوضوح.",
+    "courses.work_button": "احصل على خطتك الدراسية →",
+    "courses.special_title": "GradeUp · البرنامج السنوي الكامل",
+    "courses.special_desc": "مصمم لتحقيق أهداف العام الدراسي بالكامل — يغطي جميع وحدات المنهج والنقاط الأساسية للاختبارات.",
+    "courses.special_duration": "70 حصة (كل حصة 50 دقيقة)",
+    "courses.special_subtitle": "تعلّم منظم على مدار الفصل لتحقيق تقدم ثابت.",
+    "courses.special_feature1": "تغطية شاملة للمنهج ونقاط الامتحانات.",
+    "courses.special_feature2": "معلمون عرب + متابعة شخصية لضمان الدقة والاستمرارية.",
+    "courses.special_feature3": "تقارير مستمرة وتغذية راجعة للأهالي لرؤية النمو بوضوح.",
+    "courses.special_button": "تواصل مع مستشارك →",
+    "services.title": "نظام دعم تعليمي متكامل",
+    "services.subtitle": "نرافق الطالب في جميع مراحل التعلم، ليشعر بالتقدّم، ويراه الأهل بوضوح.",
+    "services.service1_title": "١ على ١ تدريب خاص",
+    "services.service1_desc": "تدريس فردي مخصص، مع متابعة شخصية لكل طالب",
+    "services.service2_title": "دعم في الواجبات المنزلية",
+    "services.service2_desc": "المعلم يتابع الواجبات ويشرح أخطاء الطالب ويساعده على ترسيخ المعرفة وتجنب التكرار",
+    "services.service3_title": "رابط خاص لأولياء الأمور للاستماع",
+    "services.service3_desc": "يمكن لكل ولي أمر متابعة الدرس مباشرة لمعرفة مستوى ابنه والشعور بالاطمئنان",
+    "services.service4_title": "خدمة إعادة مشاهدة الدروس",
+    "services.service4_desc": "بموافقة ولي الأمر، يتم تسجيل كل حصة بشكل آمن لسهولة مراجعة الطالب ومتابعة الأهل",
+    "services.service5_title": "تقرير مرحلي للتعلّم",
+    "services.service5_desc": "يتم إصدار تقرير شهري يوضح تقدّم الطالب ومسار تطوره وأهداف المرحلة التالية",
+    "services.service6_title": "مساعد تعلّم بشري",
+    "services.service6_desc": "إجابات على الأسئلة خلال ٢٤ ساعة لتثبيت المعرفة وضمان استمرارية التعلّم",
+    "services.cta_button": "اكتشف نظام الدعم الكامل →",
+    "learning_path.title": "مخطط مسار التعلّم",
+    "learning_path.subtitle": "من التقييم المبدئي إلى عرض النتائج، كل خطوة للطفل لها اتجاه واضح",
+    "learning_path.step1_title": "تقييم الدخول",
+    "learning_path.step1_desc": "تشخيص شامل لمستوى اللغة الإنجليزية لتحديد نقطة البداية ومطابقة المادة والمعلم المناسبين",
+    "learning_path.step2_title": "مراحل تعلّم مخصصة",
+    "learning_path.step2_desc": "دورات فردية ١ على ١، تتقدّم وفق وتيرة المدرسة بخطوات ثابتة ونمو مستمر",
+    "learning_path.step3_title": "تقييمات مرحلية وتغذية راجعة",
+    "learning_path.step3_desc": "تقييم دوري لنتائج التعلّم، يتابعه المعلم مع الأهل لضمان تعديل المسار في الوقت المناسب",
+    "learning_path.step4_title": "عرض النتائج وتقرير التقدّم",
+    "learning_path.step4_desc": "تقديم تقارير مرحلية تجعل التطور ملموساً والجهد مثمراً",
+    "promotion.title": "عروض خاصة محدودة",
+    "promotion.subtitle": "سجّل الآن وتمتّع بخصم مميز",
+    "promotion.original_price": "٢٩٩٩ ريال سعودي",
+    "promotion.discount_price": "٢٩٩٩ ريال سعودي",
+    "promotion.savings": "وفر ١٠٠٠ ريال، العرض فقط لأول ١٠٠ مشترك",
+    "promotion.cta_button": "اشترِ الآن",
+    "promotion.countdown_title": "العد التنازلي للعرض",
+    "promotion.days_label": "أيام",
+    "promotion.hours_label": "ساعات",
+    "promotion.minutes_label": "دقائق",
+    "promotion.seconds_label": "ثوانٍ",
+    "footer.company_name": "أكاديمية ٥١توك (51Talk Academy)",
+    "footer.company_desc": "منصة عالمية متخصصة في تعليم اللغة الإنجليزية عبر الإنترنت، تهدف لتقديم تدريب عالي الجودة للمتعلمين",
+    "footer.quick_links_title": "روابط سريعة",
+    "footer.link_about": "من نحن",
+    "footer.link_courses": "نظام الدورات",
+    "footer.link_teachers": "فريق المعلمين",
+    "footer.contact_title": "اتصل بنا",
+    "footer.contact_phone": "خدمة العملاء: 966 115078062",
+    "footer.contact_email": "البريد الإلكتروني: service@51talk.com",
+    "footer.contact_address": "العنوان: شارع الإمام سعود بن عبدالعزيز الفرعي، حي الملك فهد، الرياض 12274، المملكة العربية السعودية",
+    "footer.social_title": "تابعنا",
+    "footer.copyright": "footer.copyright"
+  }
+};
+
+    // 切换语言函数
+    function switchLanguage(lang) {
+        // 更新HTML语言属性
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+        // 更新所有data-i18n元素
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.dataset.i18n;
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+
+        // 保存语言选择
+        localStorage.setItem('preferred-language-gradeup', lang);
+
+        // 更新选择器
+        const selector = document.getElementById('language-selector');
+        if (selector) selector.value = lang;
+    }
+
+    // 添加语言选择器
+    function addLanguageSelector() {
+        const selectorHTML = '<div id="language-selector-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"><div style="background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); padding: 12px; border: 1px solid #e5e7eb;"><label style="display: block; font-size: 12px; font-weight: 600; color: #6b7280; margin-bottom: 6px;">Language / 语言</label><select id="language-selector" style="width: 140px; background: transparent; font-size: 14px; font-weight: 500; color: #333; border: 1px solid #d1d5db; border-radius: 4px; padding: 4px 8px; cursor: pointer;"><option value="zh">中文</option><option value="en">English</option><option value="ar">العربية</option></select></div></div>';
+
+        document.body.insertAdjacentHTML('beforeend', selectorHTML);
+
+        // 设置事件监听器
+        const selector = document.getElementById('language-selector');
+        if (selector) {
+            selector.addEventListener('change', (e) => {
+                switchLanguage(e.target.value);
+            });
+        }
+    }
+
+    // 页面加载完成后初始化
+    document.addEventListener('DOMContentLoaded', () => {
+        addLanguageSelector();
+
+        // 加载保存的语言
+        const savedLang = localStorage.getItem('preferred-language-gradeup') || 'zh';
+        switchLanguage(savedLang);
+    });
+</script>
+</body>
+</html>
